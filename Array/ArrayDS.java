@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * ArrayDS - Abishek
+ * ArrayDS
  */
 
 public class ArrayDS {
