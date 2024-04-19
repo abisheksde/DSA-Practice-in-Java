@@ -52,23 +52,22 @@ public class LinkedListMain {
                     }
                     break;
 
-                //case 5: if(list.size!=0){
-                //    System.out.println("Enter a Position : ");
-                //    int position = scanner.nextInt();
-                //    if(list.size<position){
-                //        System.out.println("Please Enter Correct Position between 0 to " + (list.size-1) + ":");
-                //        position = scanner.nextInt();
-                        //list.deleteFromPos(position);
-                //    } else{
-                        //list.deleteFromPos(position);
-                //    }
+                case 5: if(list.sizeOfList()!=0){
+                    System.out.println("Enter a Position : ");
+                    int position = scanner.nextInt();
+                    if(list.sizeOfList()<position){
+                        System.out.println("Please Enter Correct Position between 0 to " + (list.sizeOfList()-1) + ":");
+                        position = scanner.nextInt();
+                        list.deleteFromPos(position);
+                    } else{
+                        list.deleteFromPos(position);
+                    }                 
                     
+                } else {
+                    System.out.println("Sorry List is Empty :(");
+                }
                     
-                //} else {
-                //    System.out.println("Sorry List is Empty :(");
-                //}
-                    
-                //    break;
+                    break;
                 case 6:
                     System.out.println(list.sizeOfList());
                     break;

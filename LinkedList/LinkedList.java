@@ -2,6 +2,7 @@ package LinkedList;
 
 public class LinkedList<T> {
     Node head;
+    
 
     LinkedList(){
         head = null;
@@ -54,7 +55,6 @@ public class LinkedList<T> {
 
     public void insertAtPos(int pos, T val){
         Node newNode = new Node(val);
-        //What if, user Enter Far Position? - I mean, List Total Size is 5. But Customer Enter the pos 10.
 
         if(pos==0){
             insertAtBeginning(val);
@@ -71,15 +71,41 @@ public class LinkedList<T> {
         }
     }
 
-    public int sizeOfList(){ // Something is Wrong, Bcz When size is Global variable ath that time, If i did any operation (call any method), size will increase - Find the Reason
+    public int sizeOfList(){ 
         Node temp = head;
-        int size = 0;
-
+        int size = 0; 
+        // If you give this size variable as Global variable - When you call this sizeOfList() method for First Time, it will count the size of the Total elements in the List (For Example, 5)
+        // But, This is a Global variable, So after Completion of running of this sizeOfList() method. Memory of size variable will not deallocate. (If Local variable means, It will be deallocate)
+        // So, value of the size variable will be remain count of total element  (For Example, 5)
+        // But, When you call this sizeOfList() method for Second Time, once again It will count the size of the Total elements in the List & It will Add this value to Old value, which is counted by first Time
+        // So, your result will be double (for Example, 10)
+        
         while(temp != null){
             size++;
             temp = temp.next;
         }
 
         return size;
+    }
+
+    public void deleteFromPos(int position){
+
+        Node temp = head;
+        Node prev = null;
+
+        if (position==0) {
+            head = temp.next;
+            return;
+        } else{
+            for(int i=0; i<position; i++){
+                prev = temp;
+                temp = temp.next;
+            }
+
+            prev.next = temp.next;
+
+        }
+        
+
     }
 }
