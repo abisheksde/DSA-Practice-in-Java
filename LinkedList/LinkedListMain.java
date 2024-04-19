@@ -17,7 +17,8 @@ public class LinkedListMain {
             System.out.println("3. Display the List \n");
             System.out.println("4. Insert at Position \n");
             System.out.println("5. Delete from Position \n");
-            System.out.println("6. Exit \n");
+            System.out.println("6. Size of the List \n");
+            System.out.println("7. Exit \n");
             System.out.println("-----------------------");
 
             System.out.print("Please Enter a Choice : ");
@@ -38,8 +39,8 @@ public class LinkedListMain {
                     break;
                 case 4: System.out.println("Enter a Position : ");
                     int pos = scanner.nextInt();
-                    if (list.size<pos) {
-                        System.out.println("Please Enter Correct Position between 0 to " + list.size + ":");
+                    if (list.sizeOfList()<pos) {
+                        System.out.println("Please Enter Correct Position between 0 to " + list.sizeOfList() + ":");
                         pos = scanner.nextInt();
                         System.out.println("Enter a Value : ");
                         val = scanner.nextInt();
@@ -69,6 +70,9 @@ public class LinkedListMain {
                     
                 //    break;
                 case 6:
+                    System.out.println(list.sizeOfList());
+                    break;
+                case 7:
                     System.exit(0);
                     break;
             
