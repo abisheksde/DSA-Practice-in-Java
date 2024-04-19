@@ -53,10 +53,19 @@ public class LinkedList<T> {
     }
 
     public void insertAtPos(int pos, T val){
+        //What if, user Enter Far Position? - I mean, List Total Size is 5. But Customer Enter the pos 10.
+
         if(head==null){
             insertAtBeginning(val);
         } else{
-            
+            Node temp = head;
+            Node prev = null;
+
+            while(temp != null){
+                prev = temp;
+                temp = temp.next;
+            }
+            prev.next = newNode;
         }
     }
 }
