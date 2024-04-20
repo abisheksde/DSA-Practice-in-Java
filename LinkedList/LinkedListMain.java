@@ -37,7 +37,10 @@ public class LinkedListMain {
                 case 3:
                     list.display();
                     break;
-                case 4: System.out.println("Enter a Position : ");
+                case 4:
+                    list.reverseTheList();
+                    break;
+                case 5: System.out.println("Enter a Position : ");
                     int pos = scanner.nextInt();
                     if (list.sizeOfList()<pos) {
                         System.out.println("Please Enter Correct Position between 0 to " + list.sizeOfList() + ":");
@@ -52,7 +55,7 @@ public class LinkedListMain {
                     }
                     break;
 
-                case 5: if(list.sizeOfList()!=0){
+                case 6: if(list.sizeOfList()!=0){
                     System.out.println("Enter a Position : ");
                     int position = scanner.nextInt();
                     if(list.sizeOfList()<position){
@@ -68,10 +71,10 @@ public class LinkedListMain {
                 }
                     
                     break;
-                case 6:
+                case 7:
                     System.out.println(list.sizeOfList());
                     break;
-                case 7:
+                case 8:
                     System.exit(0);
                     break;
             

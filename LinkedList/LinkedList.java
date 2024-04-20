@@ -53,6 +53,10 @@ public class LinkedList<T> {
         }
     }
 
+    public void reverseTheList(){
+        // Reverse the Linked List
+    }
+
     public void insertAtPos(int pos, T val){
         Node newNode = new Node(val);
 
