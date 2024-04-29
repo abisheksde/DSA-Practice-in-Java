@@ -15,10 +15,11 @@ public class LinkedListMain {
             System.out.println("1. Insert at Beginning \n");
             System.out.println("2. Insert at End \n");
             System.out.println("3. Display the List \n");
-            System.out.println("4. Insert at Position \n");
-            System.out.println("5. Delete from Position \n");
-            System.out.println("6. Size of the List \n");
-            System.out.println("7. Exit \n");
+            System.out.println("4. Reverse the List \n");
+            System.out.println("5. Insert at Position \n");
+            System.out.println("6. Delete from Position \n");
+            System.out.println("7. Size of the List \n");
+            System.out.println("8. Exit \n");
             System.out.println("-----------------------");
 
             System.out.print("Please Enter a Choice : ");
