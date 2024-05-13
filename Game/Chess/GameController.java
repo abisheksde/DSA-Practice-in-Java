@@ -15,9 +15,34 @@ public class GameController {
             return false;
         }
 
+        if(isAnyObject(from, to)){
+            return false;
+        }
+
         // Implement More validation logic here
         // For simplicity, let's assume all moves are valid
         return true;
+   }
+
+   public static boolean isAnyObject(int[] from, int[] to){
+        int fromI = from[0];
+        int fromJ = from[1];
+
+        int toK = to[0];
+        int toL = to[1];
+
+        //If object Moves Above in Straight Line 
+        if(fromI>toK && fromJ==toL){
+            for(int i=fromI;i>toK; i--){
+                if(Board.board[from[i]][0] != 0){
+                    return false; // Object found
+                }
+ 
+            }
+            return true; // No object found
+        } else{
+            return true; // If not moving above, return true
+        }   
    }
 
    
