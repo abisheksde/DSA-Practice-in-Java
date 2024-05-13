@@ -5,12 +5,17 @@ public class ObjectFinding {
         int fromI = from[0];
         int fromJ = from[1];
 
-        int toK = to[0];
-        int toL = to[1];
+        int toI = to[0];
+        int toJ = to[1];
+
+        //int result;
+
+        //***ERROR : Try to Find the Program Flow Accurately. Because, after 2nd if-condition, it is returning the true, but not go out of the Method */
+        //***ERROR :  Above result variable cannot be accessible within the 1st & 2nd If-Condition*/
 
         //If Black object Moves Above in Straight Line 
-        if(fromI>toK && fromJ==toL){
-            for(int i=fromI;i>toK; i--){
+        if(fromI>toI && fromJ==toJ){
+            for(int i=fromI;i>toI; i--){
                 if(Board.board[i][1] == 0){
                     return true; // Object found
                 }

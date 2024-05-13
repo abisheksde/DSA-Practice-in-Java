@@ -14,6 +14,10 @@ public class GameController {
         if(Board.board[from[0]][from[1]]/1000 == Board.board[to[0]][to[1]]/1000) {
             return false;
         }
+        
+        if(ObjectFinding.isAnyObject(from, to)){
+            return false;
+        }
 
 
         // Implement More validation logic here
