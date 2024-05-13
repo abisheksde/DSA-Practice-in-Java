@@ -12,18 +12,20 @@ public class Chess {
         int[] from = new int[2];
         int[] to = new int[2];
 
-        System.out.print("Move From : ");
-        for(int i= 0; i<2; i++){
-            from[i] = scanner.nextInt();
-        }
-        System.out.println("Move From : ");
-        for(int i= 0; i<2; i++){
-            to[i] = scanner.nextInt();
-        }
+        while (true) {
+            System.out.print("Move From : ");
+            for(int i= 0; i<2; i++){
+                from[i] = scanner.nextInt();
+            }
+            System.out.println("Move To : ");
+            for(int i= 0; i<2; i++){
+                to[i] = scanner.nextInt();
+            }
 
-        GameController.movePiece(from, to);
+            GameController.movePiece(from, to);
 
-        Board.displayBoard();
+            Board.displayBoard();
+        }
     }
     
 }

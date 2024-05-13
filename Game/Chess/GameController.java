@@ -35,13 +35,13 @@ public class GameController {
         if(fromI>toK && fromJ==toL){
             for(int i=fromI;i>toK; i--){
                 if(Board.board[from[i]][0] != 0){
-                    return false; // Object found
+                    return true; // Object found
                 }
  
             }
-            return true; // No object found
+            return false; // No object found
         } else{
-            return true; // If not moving above, return true
+            return false; // If not moving above, return true
         }   
    }
 
