@@ -34,7 +34,7 @@ public class GameController {
         //If object Moves Above in Straight Line 
         if(fromI>toK && fromJ==toL){
             for(int i=fromI;i>toK; i--){
-                if(Board.board[from[i]][1] != 0){
+                if(Board.board[i][1] == 0){
                     return true; // Object found
                 }
  
