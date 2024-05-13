@@ -42,7 +42,10 @@ public class GameController {
             return false; // No object found
         } else{
             return false; // If not moving above, return true
-        }   
+        } 
+        
+        //If object Moves Above in Straight Line 
+        if()
    }
 
    
